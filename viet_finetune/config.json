@@ -1,0 +1,53 @@
+{
+    "output_path": "D:/WorkSpace/Demo tao video/viet_finetune/output",
+
+    "datasets": [
+        {
+            "formatter": "ljspeech",
+            "meta_file_train": "D:/WorkSpace/Demo tao video/viet_finetune/metadata.csv",
+            "path": "D:/WorkSpace/Demo tao video/viet_finetune"
+        }
+    ],
+
+    "model": "xtts_v2",
+    "run_name": "xtts_vi_finetune",
+
+    "num_loader_workers": 2,
+    "num_eval_loader_workers": 1,
+    "batch_size": 1,
+    "eval_batch_size": 1,
+    "grad_accum_steps": 8,
+    "eval_split_size": 0.05,
+    "mixed_precision": true,
+    "max_text_length": 250,
+
+    "num_epochs": 30,
+    "output_step": 100,
+    "save_step": 500,
+    "print_step": 25,
+    "run_eval": true,
+
+    "test_sentences": [
+        "Xin chào! Đây là giọng Việt đã fine-tune.",
+        "Tôi đang thử nghiệm giọng nói tiếng Việt nhân tạo."
+    ],
+
+    "speaker_file": null,
+    "phonemizer": "espeak",
+    "phoneme_language": "vi",
+    "use_speaker_embedding": false,
+
+    "lr_gen": 0.00005,
+    "lr_disc": 0.00005,
+    "lr_scheduler": "linear",
+    "seed": 42,
+
+    "restore_path": "tts_models/multilingual/multi-dataset/xtts_v2",
+
+    "freeze_layers": true,
+    "freeze_text_encoder": true,
+    "freeze_decoder": false,
+    "mixed_precision": true,
+    "use_bfloat16": true,
+    "max_audio_len": 240000
+}
