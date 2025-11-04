@@ -1,0 +1,27 @@
+# Bỏ qua môi trường ảo
+moviepy_env/
+venv/
+.env/
+.venv/
+
+# Bỏ cache và tạm
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Bỏ dữ liệu nặng
+*.mp4
+*.wav
+*.zip
+*.tar
+*.7z
+*.pt
+*.pth
+*.pkl
+*.npy
+*.npz
+*.onnx
+*.exe
+*.dll
